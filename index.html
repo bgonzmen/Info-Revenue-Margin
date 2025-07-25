@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: El Paradigma de la Rentabilidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#f6f6f6]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-[#003f5c] mb-4">El Paradigma de la Rentabilidad</h1>
+            <p class="text-lg md:text-xl text-[#4d8fac] max-w-3xl mx-auto">Por qué una regla de margen del 30% nos está costando millones y cómo podemos maximizar nuestro beneficio real.</p>
+        </header>
+
+        <main>
+            <section id="anatomy" class="mb-16 md:mb-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">La Anatomía de Nuestras Soluciones</h2>
+                    <p class="text-md text-[#4d8fac] max-w-2xl mx-auto mt-2">Un proyecto integral no es un monolito; es un portafolio de componentes con perfiles de rentabilidad muy diferentes.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-[#003f5c] mb-4">Márgenes Típicos por Componente</h3>
+                        <p class="text-gray-600 mb-6">La industria muestra una clara disparidad en la rentabilidad. Nuestros servicios internos son el motor de alto valor, mientras que el hardware y software de terceros son habilitadores necesarios con márgenes inherentemente más bajos.</p>
+                        <div class="chart-container">
+                            <canvas id="marginsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-2xl font-bold text-[#003f5c] mb-4">Composición de un Proyecto Típico</h3>
+                        <p class="text-gray-600 mb-6">Nuestros clientes buscan soluciones completas. Esto significa que los componentes de bajo margen son una parte esencial de las ventas de alto valor, no un elemento opcional.</p>
+                        <div class="chart-container">
+                            <canvas id="compositionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dilemma" class="bg-[#003f5c] text-white rounded-xl shadow-2xl p-8 md:p-12 mb-16 md:mb-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">El Dilema Central: Porcentaje vs. Beneficio Absoluto</h2>
+                    <p class="text-md text-[#9bd3dd] max-w-3xl mx-auto mt-2">La regla actual nos obliga a tomar la decisión con menor beneficio. Veamos el impacto financiero de un caso real.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+                    <div class="bg-white/10 rounded-lg p-6 border border-white/20 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-[#9bd3dd]">Escenario A: El Acuerdo Realista</h3>
+                        <p class="text-5xl md:text-7xl font-black text-white my-4">$700,000</p>
+                        <p class="text-xl font-bold">Beneficio Bruto</p>
+                        <p class="text-lg text-[#9bd3dd]">(con 17.5% de margen)</p>
+                        <div class="mt-4 text-xl font-bold bg-[#ff6361] text-white py-2 px-4 rounded-md inline-block">RECHAZADO POR LA REGLA</div>
+                    </div>
+                    <div class="bg-white/10 rounded-lg p-6 border border-white/20 flex flex-col justify-center items-center">
+                        <h3 class="text-2xl font-bold text-[#9bd3dd]">Escenario B: El Acuerdo "Aprobado"</h3>
+                        <p class="text-5xl md:text-7xl font-black text-white my-4">$300,000</p>
+                        <p class="text-xl font-bold">Beneficio Bruto</p>
+                        <p class="text-lg text-[#9bd3dd]">(con 30.0% de margen)</p>
+                        <div class="mt-4 text-xl font-bold bg-[#4d8fac] text-white py-2 px-4 rounded-md inline-block">APROBADO POR LA REGLA</div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <p class="text-2xl md:text-3xl font-bold text-[#ffa600]">IMPACTO FINANCIERO DE LA DECISIÓN</p>
+                    <p class="text-4xl md:text-6xl font-black text-[#ff6361] mt-2">$400,000</p>
+                    <p class="text-2xl md:text-3xl font-bold text-white">EN BENEFICIO BRUTO PERDIDO</p>
+                </div>
+            </section>
+
+            <section id="consequences" class="mb-16 md:mb-24">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">El Ciclo de Costos Ficticios: Una Consecuencia Oculta</h2>
+                    <p class="text-md text-[#4d8fac] max-w-2xl mx-auto mt-2">La presión por cumplir una meta irreal incentiva un comportamiento disfuncional que erosiona la confianza y garantiza el fracaso operativo.</p>
+                </div>
+                <div class="relative flex flex-col md:flex-row justify-between items-center w-full max-w-5xl mx-auto space-y-8 md:space-y-0 md:space-x-4">
+                    <div class="w-full md:w-1/5 text-center p-4 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl font-bold text-[#003f5c] mb-2">1</div>
+                        <h4 class="font-bold text-gray-800">Regla Rígida del 30%</h4>
+                        <p class="text-sm text-gray-600">Se impone una barrera artificial.</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#4d8fac] hidden md:block">→</div>
+                    <div class="text-4xl font-bold text-[#4d8fac] md:hidden">↓</div>
+                     <div class="w-full md:w-1/5 text-center p-4 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl font-bold text-[#003f5c] mb-2">2</div>
+                        <h4 class="font-bold text-gray-800">Falsificación de Costos</h4>
+                        <p class="text-sm text-gray-600">Se alteran costos internos para "cumplir".</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#4d8fac] hidden md:block">→</div>
+                    <div class="text-4xl font-bold text-[#4d8fac] md:hidden">↓</div>
+                    <div class="w-full md:w-1/5 text-center p-4 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl font-bold text-[#003f5c] mb-2">3</div>
+                        <h4 class="font-bold text-gray-800">Aprobación Errónea</h4>
+                        <p class="text-sm text-gray-600">Finanzas aprueba basado en datos falsos.</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#4d8fac] hidden md:block">→</div>
+                    <div class="text-4xl font-bold text-[#4d8fac] md:hidden">↓</div>
+                    <div class="w-full md:w-1/5 text-center p-4 bg-white rounded-lg shadow-md">
+                        <div class="text-4xl font-bold text-[#003f5c] mb-2">4</div>
+                        <h4 class="font-bold text-gray-800">Ejecución Imposible</h4>
+                        <p class="text-sm text-gray-600">Operaciones recibe un presupuesto irreal.</p>
+                    </div>
+                    <div class="text-4xl font-bold text-[#ff6361] hidden md:block">→</div>
+                    <div class="text-4xl font-bold text-[#ff6361] md:hidden">↓</div>
+                    <div class="w-full md:w-1/5 text-center p-4 bg-[#ff6361] text-white rounded-lg shadow-md">
+                        <div class="text-4xl font-bold mb-2">5</div>
+                        <h4 class="font-bold">Fracaso y Culpa</h4>
+                        <p class="text-sm">Se generan sobrecostos y recriminaciones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="solution" class="bg-gray-100 py-16 md:py-24 rounded-xl">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#003f5c]">Un Camino Hacia el Crecimiento Inteligente</h2>
+                    <p class="text-md text-[#4d8fac] max-w-2xl mx-auto mt-2">Proponemos una evolución de reglas simplistas a marcos estratégicos que potencien la rentabilidad real.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-6xl mb-4">🎯</div>
+                        <h3 class="text-2xl font-bold text-[#003f5c] mb-3">Estrategia de Margen Mixto</h3>
+                        <p class="text-gray-600">Gestionar la rentabilidad a nivel de portafolio, no por proyecto. Esto nos da flexibilidad para ganar acuerdos estratégicos y maximizar el beneficio total.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                         <div class="text-6xl mb-4">💰</div>
+                        <h3 class="text-2xl font-bold text-[#003f5c] mb-3">Precios Basados en Valor</h3>
+                        <p class="text-gray-600">Fijar el precio de nuestros servicios según el valor que entregamos al cliente, no según nuestro costo. Esto aumenta drásticamente el margen de nuestro core business.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                         <div class="text-6xl mb-4">🤝</div>
+                        <h3 class="text-2xl font-bold text-[#003f5c] mb-3">Comité de Acuerdos (Deal Desk)</h3>
+                        <p class="text-gray-600">Crear un equipo interfuncional (Ventas, Finanzas, Ops) para estructurar acuerdos complejos de forma colaborativa, asegurando la viabilidad y rentabilidad.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-16 py-8 border-t border-gray-300">
+            <p class="text-gray-600">Adoptar un enfoque estratégico nos permitirá ser más ágiles, competitivos y, fundamentalmente, más rentables.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const FONT_COLOR = '#003f5c';
+            const GRID_COLOR = '#e0e0e0';
+
+            const processLabel = (label) => {
+                const maxLen = 16;
+                if (label.length <= maxLen) return label;
+                
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+            
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: FONT_COLOR,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: FONT_COLOR,
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        },
+                        grid: {
+                            color: GRID_COLOR
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: FONT_COLOR,
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            };
+            
+            const marginsData = {
+                labels: ['Servicios Profesionales Propios', 'Software y SaaS de Terceros', 'Acuerdos de Mantenimiento', 'Hardware de Terceros'].map(processLabel),
+                datasets: [{
+                    label: 'Rango de Margen Típico en la Industria (%)',
+                    data: [60, 20, 17.5, 9],
+                    backgroundColor: ['#003f5c', '#4d8fac', '#9bd3dd', '#ffa600'],
+                    borderColor: ['#003f5c', '#4d8fac', '#9bd3dd', '#ffa600'],
+                    borderWidth: 1
+                }]
+            };
+
+            const marginsChartCtx = document.getElementById('marginsChart').getContext('2d');
+            new Chart(marginsChartCtx, {
+                type: 'bar',
+                data: marginsData,
+                options: { ...commonOptions, indexAxis: 'y' }
+            });
+            
+            const compositionData = {
+                labels: ['Servicios Internos', 'Software', 'Hardware', 'Servicios de Terceros'],
+                datasets: [{
+                    label: 'Composición de Ingresos por Proyecto',
+                    data: [25, 25, 25, 25],
+                    backgroundColor: [
+                        '#003f5c',
+                        '#4d8fac',
+                        '#ffa600',
+                        '#9bd3dd'
+                    ],
+                    hoverOffset: 4
+                }]
+            };
+
+            const compositionChartCtx = document.getElementById('compositionChart').getContext('2d');
+            new Chart(compositionChartCtx, {
+                type: 'doughnut',
+                data: compositionData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: FONT_COLOR,
+                                font: {
+                                    size: 14
+                                }
+                            }
+                        },
+                        tooltip: {
+                             callbacks: {
+                                title: tooltipTitleCallback,
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
